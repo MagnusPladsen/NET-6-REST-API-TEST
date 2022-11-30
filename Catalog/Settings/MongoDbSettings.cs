@@ -1,15 +1,13 @@
-namespace Catalog.Settings
+namespace Catalog.settings
 {
     public class MongoDbSettings
     {
-        public string Host { get; set; }
-        public int Port { get; set; }
+        public string ConnectionString { get 
+        {
+            return "mongodb://localhost:27017";
+        } }
+        public string DatabaseName { get; set; } = null!;
 
-        public string ConnectionString { 
-            get 
-            {
-                return $"mongodb://{Host}:{Port}";
-            }
-        } 
+        public string CollectionName { get; set; } = null!;
     }
 }
