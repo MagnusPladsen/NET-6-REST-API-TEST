@@ -11,10 +11,10 @@ namespace Catalog.settings
         public string CollectionName { get; set; }
         public string ConnectionString
         {
-                        get
-                        {
-                            return $"mongodb://{User}:{Password}@{Host}:{Port}";
-                        }
+            get
+            {
+                return $"mongodb://{User}:{Password}@{Host}:{Port}";
+            }
         }
     }
 }

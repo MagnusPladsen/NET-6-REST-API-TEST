@@ -36,3 +36,6 @@
 /Users/magnuspladsen/Documents/GitHub/NET-6-REST-API-TEST/Catalog/bin/Debug/net6.0/runtimes/linux/native/libmongocrypt.so
 /Users/magnuspladsen/Documents/GitHub/NET-6-REST-API-TEST/Catalog/bin/Debug/net6.0/runtimes/osx/native/libmongocrypt.dylib
 /Users/magnuspladsen/Documents/GitHub/NET-6-REST-API-TEST/Catalog/bin/Debug/net6.0/runtimes/win/native/mongocrypt.dll
+/Users/magnuspladsen/Documents/GitHub/NET-6-REST-API-TEST/Catalog/bin/Debug/net6.0/HealthChecks.MongoDb.dll
+/Users/magnuspladsen/Documents/GitHub/NET-6-REST-API-TEST/Catalog/bin/Debug/net6.0/Microsoft.Extensions.Diagnostics.HealthChecks.dll
+/Users/magnuspladsen/Documents/GitHub/NET-6-REST-API-TEST/Catalog/bin/Debug/net6.0/Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions.dll
