@@ -4,15 +4,15 @@ using Catalog.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using System;
 
-namespace Catalog.Controllers 
+namespace Catalog.Controllers
 {
     [ApiController]
     [Route("items")]
-    public class ItemsController : ControllerBase 
+    public class ItemsController : ControllerBase
     {
         private readonly IItemsRepository repository;
 
-        public ItemsController(IItemsRepository repository) 
+        public ItemsController(IItemsRepository repository)
         {
             this.repository = repository;
         }
@@ -34,7 +34,8 @@ namespace Catalog.Controllers
         {
             var item = await repository.GetItemAsync(id);
 
-            if (item is null) {
+            if (item is null)
+            {
                 return NotFound();
             }
 
@@ -62,7 +63,7 @@ namespace Catalog.Controllers
 
         // PUT /items/id
         [HttpPut("{id}")]
-        public async Task<ActionResult> UpdateItemAsync(Guid id, UpdateItemDto itemDto) 
+        public async Task<ActionResult> UpdateItemAsync(Guid id, UpdateItemDto itemDto)
         {
             var existingItem = await repository.GetItemAsync(id);
 

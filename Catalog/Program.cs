@@ -6,23 +6,27 @@ using MongoDB.Bson.Serialization;
 using MongoDB.Bson.Serialization.Serializers;
 using MongoDB.Driver;
 
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddControllers();
+builder.Services.AddControllers(options => {
+    options.SuppressAsyncSuffixInActionNames = false;
+});
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddSingleton<IItemsRepository, MongoDbItemsRepository>();
 
-
 builder.Services.AddSingleton<IMongoClient>(serviceProvider =>
 {
-    var settings = serviceProvider.GetRequiredService<IOptions<MongoDbSettings>>().Value;
+    var settings = builder.Configuration.GetSection("MongoDbSettings").Get<MongoDbSettings>();
     return new MongoClient(settings.ConnectionString);
 });
+
+builder.Services.AddHealthChecks();
 
 BsonSerializer.RegisterSerializer(new GuidSerializer(BsonType.String));
 BsonSerializer.RegisterSerializer(new DateTimeOffsetSerializer(BsonType.String));
@@ -39,6 +43,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.MapHealthChecks("/health");
 
 app.UseAuthorization();
 
