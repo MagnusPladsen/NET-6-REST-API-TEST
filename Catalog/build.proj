@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.Build.Traversal">
+  <ItemGroup>
+    <!-- Build all csproj and vbproj -->
+    <ProjectReference Include="**/*.*proj" />
+  </ItemGroup>
+
+  <!-- Remove WPF projects when building on Linux or Mac -->
+  <ItemGroup Condition="$([MSBuild]::IsOsPlatform('WINDOWS')) == false">
+    <ProjectReference Remove="src/Meziantou.Framework.WPF/Meziantou.Framework.WPF.csproj" />
+    <ProjectReference Remove="tests/Meziantou.Framework.WPF.Tests/Meziantou.Framework.WPF.Tests.csproj" />
+  </ItemGroup>
+</Project>

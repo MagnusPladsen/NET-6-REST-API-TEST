@@ -4,14 +4,14 @@
     "/Users/magnuspladsen/Documents/GitHub/NET-6-REST-API-TEST/Catalog/Catalog.UnitTests/Catalog.UnitTests.csproj": {}
   },
   "projects": {
-    "/Users/magnuspladsen/Documents/GitHub/NET-6-REST-API-TEST/Catalog/Catalog.UnitTests/Catalog.UnitTests.csproj": {
+    "/Users/magnuspladsen/Documents/GitHub/NET-6-REST-API-TEST/Catalog/Catalog.Api/Catalog.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/magnuspladsen/Documents/GitHub/NET-6-REST-API-TEST/Catalog/Catalog.UnitTests/Catalog.UnitTests.csproj",
-        "projectName": "Catalog.UnitTests",
-        "projectPath": "/Users/magnuspladsen/Documents/GitHub/NET-6-REST-API-TEST/Catalog/Catalog.UnitTests/Catalog.UnitTests.csproj",
+        "projectUniqueName": "/Users/magnuspladsen/Documents/GitHub/NET-6-REST-API-TEST/Catalog/Catalog.Api/Catalog.Api.csproj",
+        "projectName": "Catalog.Api",
+        "projectPath": "/Users/magnuspladsen/Documents/GitHub/NET-6-REST-API-TEST/Catalog/Catalog.Api/Catalog.Api.csproj",
         "packagesPath": "/Users/magnuspladsen/.nuget/packages/",
-        "outputPath": "/Users/magnuspladsen/Documents/GitHub/NET-6-REST-API-TEST/Catalog/Catalog.UnitTests/obj/",
+        "outputPath": "/Users/magnuspladsen/Documents/GitHub/NET-6-REST-API-TEST/Catalog/Catalog.Api/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/magnuspladsen/.nuget/NuGet/NuGet.Config"
@@ -38,6 +38,84 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "AspNetCore.HealthChecks.MongoDb": {
+              "target": "Package",
+              "version": "[6.0.2, )"
+            },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.18.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.2.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.403/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/magnuspladsen/Documents/GitHub/NET-6-REST-API-TEST/Catalog/Catalog.UnitTests/Catalog.UnitTests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/magnuspladsen/Documents/GitHub/NET-6-REST-API-TEST/Catalog/Catalog.UnitTests/Catalog.UnitTests.csproj",
+        "projectName": "Catalog.UnitTests",
+        "projectPath": "/Users/magnuspladsen/Documents/GitHub/NET-6-REST-API-TEST/Catalog/Catalog.UnitTests/Catalog.UnitTests.csproj",
+        "packagesPath": "/Users/magnuspladsen/.nuget/packages/",
+        "outputPath": "/Users/magnuspladsen/Documents/GitHub/NET-6-REST-API-TEST/Catalog/Catalog.UnitTests/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/magnuspladsen/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/Users/magnuspladsen/Documents/GitHub/NET-6-REST-API-TEST/Catalog/Catalog.Api/Catalog.Api.csproj": {
+                "projectPath": "/Users/magnuspladsen/Documents/GitHub/NET-6-REST-API-TEST/Catalog/Catalog.Api/Catalog.Api.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "FluentAssertions": {
+              "target": "Package",
+              "version": "[6.8.0, )"
+            },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[17.1.0, )"
@@ -47,6 +125,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[3.1.2, )"
+            },
+            "moq": {
+              "target": "Package",
+              "version": "[4.18.2, )"
             },
             "xunit": {
               "target": "Package",
