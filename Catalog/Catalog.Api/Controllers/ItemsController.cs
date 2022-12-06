@@ -2,7 +2,6 @@ using Catalog.Api.Dtos;
 using Catalog.Api.Entities;
 using Catalog.Api.Repositories;
 using Microsoft.AspNetCore.Mvc;
-using System;
 
 namespace Catalog.Api.Controllers
 {
